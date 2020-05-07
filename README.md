@@ -25,4 +25,5 @@ I used 90% as the training data and 10% as the testing data for my dataset.
 Also for a different approach that I also used, I gave the training set as the same yummly.json file and the testing dataset, I used the same dataset except for removing the cuisine label as it is to be predicted in the project.
 My code is running for the both the different approaches used.
 
+## Screenshots of successful execution of my program
 
