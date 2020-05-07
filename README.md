@@ -37,3 +37,4 @@ This output is when I try to run the program using the KNN classifier model. Aft
 I have also implemented a similar approach on my Jupyter notebook to predict the cuisine based on the number of ingredients that we give. This separate program used the NaiveBayes classifier for classification and prediction. 
 
 ## Screenshots of successful execution of my program(Module2)
+![image](https://user-images.githubusercontent.com/27561736/81346639-3fdec880-9080-11ea-81a1-8d7a17fce4eb.png)
