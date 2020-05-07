@@ -9,6 +9,29 @@ The goal of the project is to create an application that take a list of ingredie
 3) Use the model to predict the type of cuisine and tell the user.
 4) Find the top N closest foods (you can define N). Return the IDs of those dishes to the user. If a dataset does not have IDs associated with them you may add them arbitrarily.
 
+## Analyzing the initial data
+The initial data is obtained from the following link:
+https://www.dropbox.com/s/f0tduqyvgfuin3l/yummly.json
+It includes the master list of all possible dishes, their ingredients, an identifier, and the cuisine for different dishes. The data is stored in the yummly.json file in the form of a dictionary. One of the sample entries in the dataset is as follows : 
+~~~
+[
+  {
+    "id": 10259,
+    "cuisine": "greek",
+    "ingredients": [
+      "romaine lettuce",
+      "black olives",
+      "grape tomatoes",
+      "garlic",
+      "pepper",
+      "purple onion",
+      "seasoning",
+      "garbanzo beans",
+      "feta cheese crumbles"
+    ]
+  }
+]
+~~~
 ## Function1 : Reading the data
 Initially I loaded the json file giving the directory where it was stored on my local machine. Since it is in a dictionary format, I convert it into individual lists for each of id, cuisine and ingredients and used them for the next functions to be implemented.
 
