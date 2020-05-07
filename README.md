@@ -66,4 +66,4 @@ I have also implemented a similar approach on my Jupyter notebook to predict the
 ## Accuracy of the program implementation
 Accuracy obtained by using KNN classification model is 72%
 I have attached the screenshot which shows the accuracy of the Naive Bayes classifier used (since it is a Jupyter notebook implementation):
-
+![image](https://user-images.githubusercontent.com/27561736/81348974-b087e400-9084-11ea-889a-479a7acc233b.png)
