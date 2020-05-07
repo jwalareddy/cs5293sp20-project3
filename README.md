@@ -31,4 +31,7 @@ Also for a different approach that I also used, I gave the training set as the s
 My code is running for the both the different approaches used.
 
 ## Screenshots of successful execution of my program
+This output is 
 ![image](https://user-images.githubusercontent.com/27561736/81335583-72cb9100-906d-11ea-9475-e51940aceed8.png)
+
+
