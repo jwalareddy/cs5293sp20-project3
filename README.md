@@ -21,7 +21,12 @@ For the testing and training dataset, I used the following import statement :
 ~~~
 from sklearn.model_selection import train_test_split
 ~~~
-I used 90% as the training data and 10% as the testing data for my dataset.
+I used 70% as the training data and 30% as the testing data for my dataset.
+The function is as follows : 
+~~~
+def split_test_and_training(features, labels, percent_training=0.7):
+~~~
+
 Also for a different approach that I also used, I gave the training set as the same yummly.json file and the testing dataset, I used the same dataset except for removing the cuisine label as it is to be predicted in the project.
 My code is running for the both the different approaches used.
 
