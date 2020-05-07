@@ -49,9 +49,10 @@ The function is as follows :
 ~~~
 def split_test_and_training(features, labels, percent_training=0.7):
 ~~~
-
+I take the input from the n closest inputs from the user and trained the model using the KNearest Neighbours classifier. 
 Also for a different approach that I also used, I gave the training set as the same yummly.json file and the testing dataset, I used the same dataset except for removing the cuisine label as it is to be predicted in the project.
 My code is running for the both the different approaches used.
+
 
 ## Screenshots of successful execution of my program(Module1)
 This output is when I try to run the program using the KNN classifier model. After giving the command python main.py, the control goes to the list_creator function which returns the list of the individual items in the json dataset. On calling the main function which has the logic for user input, initially it creates the vecctorized form for the ingredients and returns that value. Based on the test and train data set and the logic for the KNN classifier, it predicts the number of closest items and the cuisine. 
@@ -61,3 +62,8 @@ I have also implemented a similar approach on my Jupyter notebook to predict the
 
 ## Screenshots of successful execution of my program(Module2)
 ![image](https://user-images.githubusercontent.com/27561736/81346639-3fdec880-9080-11ea-81a1-8d7a17fce4eb.png)
+
+## Accuracy of the program implementation
+Accuracy obtained by using KNN classification model is 72%
+I have attached the screenshot which shows the accuracy of the Naive Bayes classifier used (since it is a Jupyter notebook implementation):
+
