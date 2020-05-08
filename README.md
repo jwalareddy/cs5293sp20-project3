@@ -35,9 +35,14 @@ It includes the master list of all possible dishes, their ingredients, an identi
 ## Function1 : Reading the data
 Initially I loaded the json file giving the directory where it was stored on my local machine. Since it is in a dictionary format, I convert it into individual lists for each of id, cuisine and ingredients and used them for the next functions to be implemented.
 
-## Vectorized form of the ingredients
-Next, I used the Tf-idf vectorizer to turn in the ingredients in a vectorized form.
-
+## Data Cleaning approaches
+I followed the following text cleaning procedures :
+1) converted all entries to lowercase
+2) remove the special characters, digits and other punctuations
+~~~
+ingredient.lower()                               
+ingredient = re.sub("[^a-zA-Z]"," ",ingredient)   
+~~~
 ## Classification algorithm
 I used 2 different aprroaches to build my classification model. Initially I used the KNN classification algorithm to predict the nearby ingredient cuisines
 For the testing and training dataset, I used the following import statement :
@@ -67,3 +72,15 @@ I have also implemented a similar approach on my Jupyter notebook to predict the
 Accuracy obtained by using KNN classification model is 72%
 I have attached the screenshot which shows the accuracy of the Naive Bayes classifier used (since it is a Jupyter notebook implementation):
 ![image](https://user-images.githubusercontent.com/27561736/81348974-b087e400-9084-11ea-889a-479a7acc233b.png)
+
+## Alternatives
+We can improve the accuracy of the above results using the following approaches : 
+1) Better data cleaning and data preprocessing steps
+2) We could train a neural network for better classification results.
+
+## Submitting my code :
+I have also made a git tag on my repository with the latest commit :
+~~~
+git tag v1.0
+git push origin v1.0
+~~~
