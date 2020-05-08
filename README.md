@@ -77,7 +77,8 @@ I have attached the screenshot which shows the accuracy of the Naive Bayes class
 We can improve the accuracy of the above results using the following approaches : 
 1) Better data cleaning and data preprocessing steps
 2) We could train a neural network for better classification results.
-
+## Finding the similarity measure 
+TO find the similarity between a given cuisine and others, I used the cosine similarity coefficient.
 ## Submitting my code :
 I have also made a git tag on my repository with the latest commit :
 ~~~
