@@ -88,6 +88,10 @@ I have attached the screenshot which shows the accuracy of the Naive Bayes class
 
 ![image](https://user-images.githubusercontent.com/27561736/81365211-2607aa80-90ad-11ea-8c8e-1cdb5abcc671.png)
 
+## Steps I have used : 
+i) Training the data with the KNN classifier
+ii) Predicting the cuisine using the given ingredients
+iii) Finding the nearest neighbours and their distances
 ## Turning text into features
 To turn the text into features for the 2 modules that I chose, I used the CountVectorizer and the Tf-idf vectorizer. The Tf-idf vectorizer is based on the Bag of Words model.
 ~~~
