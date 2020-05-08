@@ -58,7 +58,19 @@ I take the input from the n closest inputs from the user and trained the model u
 Also for a different approach that I also used, I gave the training set as the same yummly.json file and the testing dataset, I used the same dataset except for removing the cuisine label as it is to be predicted in the project.
 My code is running for the both the different approaches used.
 
-
+## Prediction code(Count Vectorizer)
+~~~
+vect = CountVectorizer()
+X_dtm = vect.fit_transform(X)
+vect = CountVectorizer(token_pattern=r"'([a-z ]+)'")
+knn = KNeighborsClassifier(n_neighbors=100)
+knn.fit(train_data,test_data)
+y_pred=knn.predict(test_data)
+knn.fit(X,y)
+X_new = new[feature_cols]
+new_pred_class_knn = knn.predict(X_new)
+new_pred_class_knn
+~~~
 ## Screenshots of successful execution of my program(Module1)
 This output is when I try to run the program using the KNN classifier model. After giving the command python main.py, the control goes to the list_creator function which returns the list of the individual items in the json dataset. On calling the main function which has the logic for user input, initially it creates the vecctorized form for the ingredients and returns that value. Based on the test and train data set and the logic for the KNN classifier, it predicts the number of closest items and the cuisine. 
 ![image](https://user-images.githubusercontent.com/27561736/81335583-72cb9100-906d-11ea-9475-e51940aceed8.png)
@@ -84,6 +96,13 @@ To turn the text into features for the 2 modules that I chose, I used the CountV
 The reason for choosing the Tf-idf vectorizer is that it makes the computation process easier. In my dataset, I am extracting the individual ingredients and turning each of that into the vectorized form, so it extracts these particular terms relatively easy.
 To predict the n-closest reciptes to the cuisine that has been generated and this vectorizer makes this process easy ( the similarity computation between 2 entities is easier)
 In my oter model approach, I tried it with using the Count Vectorizer and it is primarily used for its better skewness
+## What classifiers/clustering methods I choose and why?
+As in the screenshots that I have updated, I have used 2 models KNN Classifier and Naive Bayes model. For KNN classifier, it requires training data which makes it faster than other classification algorithms. 
+It does not require the training concept before making predictions, and when i change my test and train data, though this wil not affect the accuracy of the algorithm implemented.
+Another reason to select this is for its easy implementation for the lesser number of arguments that it requires and can be used easily as an input to other algorithm mechanisms.
+In another approach, I used Naive Bayes model. For this approach, I considered a very small sample of train.json file. For such small data, it is easier to implement considering the size.
+For smaller data, the implementation was fast and was easier to make predictions for the cuisine generation.
+I assumed scalability to be a good advantage as well.
 
 ## What N did I choose ?
 In my code, there is a subsection that mentions the N closest that I would want to predict.
@@ -103,6 +122,9 @@ We can improve the accuracy of the above results using the following approaches 
 2) We could train a neural network for better classification results.
 ## Finding the similarity measure 
 TO find the similarity between a given cuisine and others, I used the cosine similarity coefficient.
+
+## Tests
+
 ## Submitting my code :
 I have also made a git tag on my repository with the latest commit :
 ~~~
