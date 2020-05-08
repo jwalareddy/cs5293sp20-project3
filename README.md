@@ -91,7 +91,7 @@ I have attached the screenshot which shows the accuracy of the Naive Bayes class
 ## Turning text into features
 To turn the text into features for the 2 modules that I chose, I used the CountVectorizer and the Tf-idf vectorizer. The Tf-idf vectorizer is based on the Bag of Words model.
 ~~~
- vectorizer = TfidfVectorizer(use_idf = True, stop_words = 'english',max_features = 4000)
+vectorizer = TfidfVectorizer(use_idf = True, stop_words = 'english',max_features = 4000)
 ~~~
 The reason for choosing the Tf-idf vectorizer is that it makes the computation process easier. In my dataset, I am extracting the individual ingredients and turning each of that into the vectorized form, so it extracts these particular terms relatively easy.
 To predict the n-closest reciptes to the cuisine that has been generated and this vectorizer makes this process easy ( the similarity computation between 2 entities is easier)
