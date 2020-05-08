@@ -124,7 +124,15 @@ We can improve the accuracy of the above results using the following approaches 
 TO find the similarity between a given cuisine and others, I used the cosine similarity coefficient.
 
 ## Tests
-
+I defined my tests to verify the length of the ingredients, id and the cuisine generated when loaded as a dataframe.
+~~~
+x, cuisine_values = main.create_separate_lists(file)
+assert len(cuisine_values) == 1
+y, meal_values = main.create_separate_lists(file)
+assert len(meal_values)==1
+z, indiv_ingredients = main.create_separate_lists(file)
+assert len(indiv_ingredients)==1
+~~~
 ## Submitting my code :
 I have also made a git tag on my repository with the latest commit :
 ~~~
