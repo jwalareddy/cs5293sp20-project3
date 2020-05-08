@@ -68,10 +68,12 @@ I have also implemented a similar approach on my Jupyter notebook to predict the
 ## Screenshots of successful execution of my program(Module2)
 ![image](https://user-images.githubusercontent.com/27561736/81346639-3fdec880-9080-11ea-81a1-8d7a17fce4eb.png)
 
+
 ## Accuracy of the program implementation
 Accuracy obtained by using KNN classification model is 72%
 I have attached the screenshot which shows the accuracy of the Naive Bayes classifier used (since it is a Jupyter notebook implementation):
 ![image](https://user-images.githubusercontent.com/27561736/81348974-b087e400-9084-11ea-889a-479a7acc233b.png)
+
 
 ## Alternatives
 We can improve the accuracy of the above results using the following approaches : 
