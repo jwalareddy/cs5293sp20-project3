@@ -76,7 +76,27 @@ I have attached the screenshot which shows the accuracy of the Naive Bayes class
 
 ![image](https://user-images.githubusercontent.com/27561736/81365211-2607aa80-90ad-11ea-8c8e-1cdb5abcc671.png)
 
+## Turning text into features
+To turn the text into features for the 2 modules that I chose, I used the CountVectorizer and the Tf-idf vectorizer. The Tf-idf vectorizer is based on the Bag of Words model.
+~~~
+ vectorizer = TfidfVectorizer(use_idf = True, stop_words = 'english',max_features = 4000)
+~~~
+The reason for choosing the Tf-idf vectorizer is that it makes the computation process easier. In my dataset, I am extracting the individual ingredients and turning each of that into the vectorized form, so it extracts these particular terms relatively easy.
+To predict the n-closest reciptes to the cuisine that has been generated and this vectorizer makes this process easy ( the similarity computation between 2 entities is easier)
+In my oter model approach, I tried it with using the Count Vectorizer and it is primarily used for its better skewness
 
+## What N did I choose ?
+In my code, there is a subsection that mentions the N closest that I would want to predict.
+~~~
+KNN_classifier(test_data,nearby,5)
+~~~
+In the KNN_Classifer function, I used the predict_proba function to get the probability estimates of the test data that I have passed as an input. Alternately, I can also specify this as a user defined argument, where the user will have the ability to generate the nearest n recipes and n is any arbitary value that the user wants to enter. But in my program i specified it as 5.
+I tried giving the user input to enter the number of closest recipes that he would want to find :
+~~~
+ user_input = input("Enter n where n is the number of closest recipes that you would want to find")
+ nearby = KNN_fitdata(training_data,cuisine,user_input)
+~~~
+So here based on the user_input, the KNN model is fitted and the user_input number of closest recipes are outputted.
 ## Alternatives
 We can improve the accuracy of the above results using the following approaches : 
 1) Better data cleaning and data preprocessing steps
