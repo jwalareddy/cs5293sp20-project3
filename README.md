@@ -75,6 +75,9 @@ I have attached the screenshot which shows the accuracy of the Naive Bayes class
 ![image](https://user-images.githubusercontent.com/27561736/81348974-b087e400-9084-11ea-889a-479a7acc233b.png)
 
 
+
+
+
 ## Alternatives
 We can improve the accuracy of the above results using the following approaches : 
 1) Better data cleaning and data preprocessing steps
