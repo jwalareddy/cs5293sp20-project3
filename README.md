@@ -100,10 +100,13 @@ To turn the text into features for the 2 modules that I chose, I used the CountV
 ~~~
 vectorizer = TfidfVectorizer(use_idf = True, stop_words = 'english',max_features = 4000)
 ~~~
-The reason for choosing the Tf-idf vectorizer is that it makes the computation process easier. In my dataset, I am extracting the individual ingredients and turning each of that into the vectorized form, so it extracts these particular terms relatively easy.
+The reason for choosing the Tf-idf vectorizer is that it makes the computation process easier. In my dataset, I am extracting the individual ingredients and turning each In this case, ingredients with higher tf-idf scores are more useful in being co-related with a particular cuisine compared to other ingredients that have lower tf-idf scores. 
+By vectorizing, we can apply the fit_transform() method. This method joins the two steps and is used for the initial fitting of parameters on the training set x, but it also returns a transformed x′. Internally, it just calls first fit() and then transform() on the same data.of that into the vectorized form, so it extracts these particular terms relatively easy.
 To predict the n-closest reciptes to the cuisine that has been generated and this vectorizer makes this process easy ( the similarity computation between 2 entities is easier)
+
 In my oter model approach, I tried it with using the Count Vectorizer and it is primarily used for its better skewness
 ## What classifiers/clustering methods I choose and why?
+
 As in the screenshots that I have updated, I have used 2 models KNN Classifier and Naive Bayes model. For KNN classifier, it requires training data which makes it faster than other classification algorithms. 
 It does not require the training concept before making predictions, and when i change my test and train data, though this wil not affect the accuracy of the algorithm implemented.
 Another reason to select this is for its easy implementation for the lesser number of arguments that it requires and can be used easily as an input to other algorithm mechanisms.
@@ -118,7 +121,16 @@ In my code, there is a subsection that mentions the N closest that I would want 
 ~~~
 KNN_classifier(test_data,nearby,5)
 ~~~
-In the KNN_Classifer function, I used the predict_proba function to get the probability estimates of the test data that I have passed as an input. Alternately, I can also specify this as a user defined argument, where the user will have the ability to generate the nearest n recipes and n is any arbitary value that the user wants to enter. But in my program i specified it as 5.
+In the KNN_Classifer function, I used the predict_proba function to get the probability estimates of the test data that I have passed as an input. Alternately, I can also specify this as a user defined argument, where the user will have the ability to generate the nearest n recipes and n is any arbitary value that the user wants to enter. But in my program i specified it as 5. It doesn't assume anything about the underlying data. This is an extremely useful feature in our case since the data in our dataset doesn't really follow any theoretical assumption.
+This algorithm requires no training before making predictions, new data can be added seamlessly.
+There are only two parameters required to implement KNN i.e. the value of K and the distance function (e.g. Euclidean or Manhattan etc.)
+The train_test_split() function is used to divide the given dataset into the train and test datasets. It is imported from the 
+~~~
+from sklearn.model_selection import train_test_split
+~~~
+The next step is  training the classification model. In this the KNeighborsClassifier is used to create the model. It is fit using the X_train and Y_train data. 
+  - The neigh.predict() function takes the X_test as input.
+  - The KNN Classifier gave an accuracy of 75% approximately.
 I tried giving the user input to enter the number of closest recipes that he would want to find :
 ~~~
  user_input = input("Enter n where n is the number of closest recipes that you would want to find")
