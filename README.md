@@ -91,7 +91,10 @@ I have attached the screenshot which shows the accuracy of the Naive Bayes class
 ## Steps I have used : 
 i) Training the data with the KNN classifier
 ii) Predicting the cuisine using the given ingredients
-iii) Finding the nearest neighbours and their distances
+iii) Finding the nearest neighbours and their distances 
+iv) Vectorized the ingredients, trained the vectorized and built the prediction model
+v) Prediction to which these cuisines map to
+vi) 
 ## Turning text into features
 To turn the text into features for the 2 modules that I chose, I used the CountVectorizer and the Tf-idf vectorizer. The Tf-idf vectorizer is based on the Bag of Words model.
 ~~~
@@ -109,6 +112,8 @@ For smaller data, the implementation was fast and was easier to make predictions
 I assumed scalability to be a good advantage as well.
 
 ## What N did I choose ?
+Chose the closest N recipes using the NearestNeighbors() function from the NearestNeighbors package.  
+Using this function I created an object neigh and passed the value of N. 
 In my code, there is a subsection that mentions the N closest that I would want to predict.
 ~~~
 KNN_classifier(test_data,nearby,5)
@@ -136,6 +141,14 @@ y, meal_values = main.create_separate_lists(file)
 assert len(meal_values)==1
 z, indiv_ingredients = main.create_separate_lists(file)
 assert len(indiv_ingredients)==1
+~~~
+
+Absolute test cases
+~~~
+ user input - sugar, pistachio, flour, eggs
+   obtained output cuisine - indian
+ user input - water, vegetable oil, bell peppers, clove
+  obtained output cuisine - southern_us
 ~~~
 ## Submitting my code :
 I have also made a git tag on my repository with the latest commit :
