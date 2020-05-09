@@ -93,8 +93,8 @@ i) Training the data with the KNN classifier
 ii) Predicting the cuisine using the given ingredients
 iii) Finding the nearest neighbours and their distances 
 iv) Vectorized the ingredients, trained the vectorized and built the prediction model
-v) Prediction to which these cuisines map to
-vi) 
+v) Prediction to which these cuisines map to in these ingredients
+
 ## Turning text into features
 To turn the text into features for the 2 modules that I chose, I used the CountVectorizer and the Tf-idf vectorizer. The Tf-idf vectorizer is based on the Bag of Words model.
 ~~~
