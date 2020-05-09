@@ -131,6 +131,7 @@ from sklearn.model_selection import train_test_split
 The next step is  training the classification model. In this the KNeighborsClassifier is used to create the model. It is fit using the X_train and Y_train data. 
   - The neigh.predict() function takes the X_test as input.
   - The KNN Classifier gave an accuracy of 75% approximately.
+  The Naive Bayes gives 74.6% accuracy as well.
 I tried giving the user input to enter the number of closest recipes that he would want to find :
 ~~~
  user_input = input("Enter n where n is the number of closest recipes that you would want to find")
@@ -157,7 +158,7 @@ assert len(indiv_ingredients)==1
 
 Absolute test cases
 ~~~
- user input - sugar, pistachio, flour, eggs
+ user input - sugar, lentils, flour, eggs
    obtained output cuisine - indian
  user input - water, vegetable oil, bell peppers, clove
   obtained output cuisine - southern_us
